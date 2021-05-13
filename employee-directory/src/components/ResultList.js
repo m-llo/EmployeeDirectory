@@ -3,8 +3,8 @@ import React from "react";
 function ResultList(props) {
   return (
     <div className="px-5">
-    <table className="table table-striped dataTable p-5">
-      <thead>
+    <table className="table table-striped dataTable p-5 bg-light">
+      <thead className="bg-primary text-light ">
         <tr>
         <th scope="col">
           Picture
@@ -26,7 +26,7 @@ function ResultList(props) {
         </th>
       </tr>
       </thead>
-      <tbody>
+      <tbody className="table-hover">
       {props.results.map(result => (
        <tr key={result.login.uuid}>
          <td><img src={result.picture.thumbnail} alt="employee thumbnail"/></td>
