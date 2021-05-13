@@ -38,6 +38,7 @@ class SearchResultContainer extends Component {
   };
   handleFormSubmit = (event) => {
     event.preventDefault()
+  
     let employee = this.state.search
     console.log(employee)
     this.employeeSearch(employee)
@@ -50,6 +51,7 @@ class SearchResultContainer extends Component {
     const result = employeeList.filter(employees => employees.name.first === find)
     console.log("search result " ,result)
     this.setState({ displayed: result })
+    
   };
   // need an event handler
   sortByName = () => {
