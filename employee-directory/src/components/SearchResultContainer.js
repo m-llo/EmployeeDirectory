@@ -48,7 +48,7 @@ class SearchResultContainer extends Component {
     console.log("searching for" , find)
     let employeeList = this.state.displayed
     console.log("employee list ", employeeList)
-    const result = employeeList.filter(employees => employees.name.first === find)
+    const result = employeeList.filter(employees => employees.name.last === find)
     console.log("search result " ,result)
     this.setState({ displayed: result })
     
