@@ -38,11 +38,17 @@ class SearchResultContainer extends Component {
   };
   handleFormSubmit = (event) => {
     event.preventDefault()
-    this.employeeSearch(this.state.search)
+    let employee = this.state.search
+    console.log(employee)
+    this.employeeSearch(employee)
   };
   employeeSearch = (employee) => {
+    let find = employee
+    console.log("searching for" , find)
     let employeeList = this.state.displayed
-    const result = employeeList.filter(employees => employees == employee)
+    console.log("employee list ", employeeList)
+    const result = employeeList.filter(employees => employees.name.first === find)
+    console.log("search result " ,result)
     this.setState({ displayed: result })
   };
   // need an event handler

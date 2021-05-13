@@ -9,8 +9,8 @@ function Header(props) {
            <p></p>
            <span className="d-flex">
               <form className="d-flex align-items-end">
-                <input className="form-control  m-2" type="text" value={props.search} id="search" onChange={()=>props.handleInputChange()} placeholder="search"></input>
-                <button className="btn btn-primary m-2" type="submit"onClick={()=> props.handleFormSubmit()}>Search</button>
+                <input className="form-control  m-2" type="text" value={props.search} id="search" onChange={(event)=>props.handleInputChange(event)} placeholder="Search by First Name"></input>
+                <button className="btn btn-primary m-2" value={props.search} type="submit"onClick={(event)=> props.handleFormSubmit(event)}>Search</button>
               </form>
          </span>
         </div>
